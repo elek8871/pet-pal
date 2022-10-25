@@ -1,37 +1,70 @@
-# Pet Pal
+# Getting Started with Create React App
 
-##Tech stack
-- Django
-- React
-- HTML
-- Tailwind
-- Css
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## App description
-Pet Pals is a fur-friendly application! With Pet Pals, you can keep track of feeding schedules, vet vists, potty trips, and walks. Did your pet just have a vet visit? Log it on our vet visit form. Keep track of their weight, shots, or when they need their flea medicine. You can also keep track of the last time your pet was let out or went potty. Log your pet walks and how long you were getting some good exercise. Have multiple pets? Great! Add them all under your user to get started!
+## Available Scripts
 
-## Wireframes
-![wireframe](./Pet-Pal-Wireframe/Login.png)
-![wireframe](./Pet-Pal-Wireframe/Selection-page.png)
-![wireframe](./Pet-Pal-Wireframe/Vet-visit-form.png)
+In the project directory, you can run:
 
-## User Stories
-- As a user I would like to make an account and log on
-- as a user I would like to make a pet 'user' 
-- as a user I would like to log vet visits on the vet form
-- as a user I would like to log how long i walked my pet
-- as a user i would like to see a schedule of when i have and haven't fed my pet
-- as a user i would like to see a list of potty trips
-- as a user i would like to be able to log potty trips
-- as a user i would like to be able to add multiple pets
+### `npm start`
 
-## Team
-- Michelle Elek
-- Megan Benn
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Work Schedule
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-![Schedule](./Pet-Pal-Wireframe/Work-schedule.png)
+### `npm test`
 
-## ERD
-![ERD](./Pet-Pal-Wireframe/ERD.png)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
