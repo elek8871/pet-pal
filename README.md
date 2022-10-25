@@ -35,3 +35,31 @@ Pet Pals is a fur-friendly application! With Pet Pals, you can keep track of fee
 
 ## ERD
 ![ERD](./Pet-Pal-Wireframe/ERD.png)
+
+##RESTful Routes
+
+### Users
+
+| HTTP METHOD (_Verb_) | URL (_Nouns_) | CRUD | Response                                                   | Notes |
+| -------------------- | ------------- | ---- | ---------------------------------------------------------- | ----- |
+| POST                 | /users        | C    | create new user                                            |       |
+| GET                  | /users/:id    | R    | show user's profile including their goal lists             |       |
+| PUT                  | /users/:id    | U    | edit the user's profile                                    |       |
+| POST                 | /users/login  | C    | accept a payload of form data and use it to login the user |       |
+
+### Pet
+
+| HTTP METHOD (_Verb_) | URL (_Nouns_)  | CRUD | Response                                       | Notes |
+| -------------------- | -------------- | ---- | ---------------------------------------------- | ----- |
+| POST                 | /pet           | C    | create a new pet                               |       |
+| GET                  | /              | R    | Homepage                                       |       |
+| PUT                  | /pet/:id       | U    | edit a pet                                     |       |
+| DELETE               | /pet/:id       | D    | remove pet from user's profile                 |       |
+
+### Pet diary
+| HTTP METHOD (_Verb_) | URL (_Nouns_) | CRUD | Response                                                   | Notes |
+| -------------------- | ------------- | ---- | ---------------------------------------------------------- | ----- |
+| POST                 | /diary        | C    | create new entry                                           |       |
+| GET                  | /diary/:id    | R    | show pet's diary                                           |       |
+| PUT                  | /diary/:id    | U    | edit the pet's diary                                       |       |
+| DELETE               | /diary/:id    | C    | Delete an entry in the pet diary                           |       |
