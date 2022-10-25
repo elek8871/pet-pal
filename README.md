@@ -30,3 +30,6 @@ Pet Pals is a fur-friendly application! With Pet Pals, you can keep track of fee
 - Megan Benn
 
 ## Work Schedule
+
+## ERD
+![ERD]()
