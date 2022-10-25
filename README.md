@@ -31,5 +31,7 @@ Pet Pals is a fur-friendly application! With Pet Pals, you can keep track of fee
 
 ## Work Schedule
 
+![Schedule](./Pet-Pal-Wireframe/Work-schedule.png)
+
 ## ERD
 ![ERD](./Pet-Pal-Wireframe/ERD.png)
