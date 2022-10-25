@@ -13,7 +13,7 @@ Pet Pals is a fur-friendly application! With Pet Pals, you can keep track of fee
 ## Wireframes
 ![wireframe](./Pet-Pal-Wireframe/Login.png)
 ![wireframe](./Pet-Pal-Wireframe/Selection-page.png)
-![wireframe](./Pet-Pal-Wireframe/vet-visit-form.png)
+![wireframe](./Pet-Pal-Wireframe/Vet-visit-form.png)
 
 ## User Stories
 - As a user I would like to make an account and log on
