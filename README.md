@@ -1,6 +1,7 @@
 # Pet Pal
 
 ##Tech stack
+
 - Django
 - React
 - HTML
