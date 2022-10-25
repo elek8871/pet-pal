@@ -49,7 +49,7 @@ const handleSubmit = async e =>{
     }
     return(
         <div>
-           <h1> Sign up to create a Bucket List </h1>
+           <h1> Sign up to add your pet!</h1>
             {/* display msg if error occure */}
             <p> {msg}</p>
 
@@ -60,7 +60,7 @@ const handleSubmit = async e =>{
                         type = "text"
                         id = "name"
                         placeholder = "Enter your user name"
-                        onChange = {e=>setName(e.target.value)}
+                        onChange = {e=> setName(e.target.value)}
                         value = {name}
                         required
                     />
