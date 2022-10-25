@@ -1,6 +1,6 @@
 # Pet Pal
 
-##Tech stack
+## Tech stack
 - Django
 - React
 - HTML
@@ -8,7 +8,7 @@
 - Css
 
 ## App description
-Pet Pals is a fur-friendly application! With Pet Pals, you can keep track of feeding schedules, vet vists, potty trips, and walks. Did your pet just have a vet visit? Log it on our vet visit form. Keep track of their weight, shots, or when they need their flea medicine. You can also keep track of the last time your pet was let out or went potty. Log your pet walks and how long you were getting some good exercise. Have multiple pets? Great! Add them all under your user to get started!
+Pet Pals is a fur-friendly application! With Pet Pals, you can keep track of feeding schedules, vet visits, potty trips, and walks. Did your pet just have a vet visit? Log it on our vet visit form. Keep track of their weight, shots, or when they need their flea medicine. You can also keep track of the last time your pet was let out or went potty. Log your pet walks and how long you were getting some good exercise. Have multiple pets? Great! Add them all under your user to get started!
 
 ## Wireframes
 ![wireframe](./Pet-Pal-Wireframe/Login.png)
