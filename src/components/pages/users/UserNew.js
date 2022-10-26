@@ -13,35 +13,35 @@ const [msg, setMsg] = useState(" ")
 const navigate = useNavigate()
 
 // // handle form submit
-// const handleSubmit = async e =>{
-//     e.preventDefault()
-//     try{
-//         // posts form body to the backend server
-//         const reqBody = {
-//             name, 
-//             email,
-//             password
-//         }
-//         const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/users`, reqBody)
-//         // save the token in local storage
-//         const { token } = response.data
-//         localStorage.setItem("jwt", token)
-//         // decode the token
-//         const decoded = jwt_decode(token)
-//         // set the user in Apps state to be the decoded token
-//         setCurrentUser(decoded)
-//         // got to user profile page
-//         navigate("/")
+const handleSubmit = async e =>{
+    e.preventDefault()
+    try{
+        // posts form body to the backend server
+        const reqBody = {
+            name, 
+            email,
+            password
+        }
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/users`, reqBody)
+        // save the token in local storage
+        const { token } = response.data
+        localStorage.setItem("jwt", token)
+        // decode the token
+        const decoded = jwt_decode(token)
+        // set the user in Apps state to be the decoded token
+        setCurrentUser(decoded)
+        // got to user profile page
+        navigate("/")
 
-//     }catch(err){
-//         console.warn(err)
-//         if(err.response){
-//             if(err.response.status === 400){
-//                 setMsg(err.response.data.msg)
-//             }
-//         }
-//     }
-// }
+    }catch(err){
+        console.warn(err)
+        if(err.response){
+            if(err.response.status === 400){
+                setMsg(err.response.data.msg)
+            }
+        }
+    }
+}
 
 // render a navigate component if user is already logged in 
     if (currentUser){
@@ -50,7 +50,7 @@ const navigate = useNavigate()
     return(
         <div>
            <h1> Sign up to add your pet!</h1>
-            {/* display msg if error occures */}
+            {/* display msg if error occurs */}
             <p> {msg}</p>
 
             {/* new user form */}
