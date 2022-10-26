@@ -22,7 +22,7 @@ const handleSubmit = async e =>{
             email,
             password
         }
-        const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/users`, reqBody)
+        const response = await axios.post('/api-v1/users', reqBody)
         // save the token in local storage
         const { token } = response.data
         localStorage.setItem("jwt", token)
@@ -59,7 +59,7 @@ const handleSubmit = async e =>{
                     <input 
                         type = "text"
                         id = "name"
-                        placeholder = "Enter your user name"
+                        placeholder = "Enter your name"
                         onChange = {e=> setName(e.target.value)}
                         value = {name}
                         required
