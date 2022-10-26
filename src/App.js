@@ -13,25 +13,22 @@ import PetNew from './components/pages/pets/PetNew'
 import NavBar from './components/partials/NavBar';
 
 
-
-
-
 export default function App() {
 
-  // const [currentUser,setCurrentUser] = useState (null)
-  // // useEffect -- if the user navigates away form the page, we will log them back in
-  // useEffect(() => {
-  //   // check to see if token is in storage
-  //   const token = localStorage.getItem('jwt')
-  //   if (token) {
-  //     // if so, we will decode it and set the user in app state
-  //     setCurrentUser(jwt_decode(token))
-  //   } else {
-  //     setCurrentUser(null)
-  //   }
+  const [currentUser,setCurrentUser] = useState (null)
+  // useEffect -- if the user navigates away form the page, we will log them back in
+  useEffect(() => {
+    // check to see if token is in storage
+    const token = localStorage.getItem('jwt')
+    if (token) {
+      // if so, we will decode it and set the user in app state
+      setCurrentUser(jwt_decode(token))
+    } else {
+      setCurrentUser(null)
+    }
     
-  // }, []) // happen only once
-  // console.log(currentUser)
+  }, []) // happen only once
+  console.log(currentUser)
 
 
   return (
@@ -43,7 +40,6 @@ export default function App() {
               <Route path='/pet/new' element={<PetNew/>} /> 
               <Route path='/user/new' element={<UserNew/>} /> 
               <Route path='/user/login' element={<UserLogin/>} /> 
-                        
             </Routes>
         </Router>
     </div>

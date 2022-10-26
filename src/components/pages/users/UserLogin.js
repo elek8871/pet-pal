@@ -19,7 +19,7 @@ export default function UserLogin( {currentUser, setCurrentUser}){
                 email,
                 password
             }
-            console.log(reqBody)
+            console.log('TACO', reqBody)
             const response = await axios.post(`/user/login`, reqBody)
 
             // save the token in local storage
