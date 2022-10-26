@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import { useState , useEffect} from 'react';
 import jwt_decode from "jwt-decode"
@@ -36,11 +36,16 @@ export default function App() {
 
   return (
     <div className="App">
-        <Home />
-        <Profile />
-        <PetNew />
-        <PetEdit />
-        <ProfileEdit />
+        <Router>
+          <NavBar />
+            <Routes>
+                <Route/>
+                <Route/>
+                <Route/>
+                <Route/>
+                <Route/>
+            </Routes>
+        </Router>
     </div>
   );
 }
