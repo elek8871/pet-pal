@@ -31,7 +31,7 @@ export default function App() {
   //   }
     
   // }, []) // happen only once
-  // // console.log(currentUser)
+  // console.log(currentUser)
 
 
   return (
@@ -39,11 +39,11 @@ export default function App() {
         <Router>
           <NavBar />
             <Routes>
-                <Route/>
-                <Route/>
-                <Route/>
-                <Route/>
-                <Route/>
+              <Route path='/' element={<Home/>} /> 
+              <Route path='/pet/new' element={<PetNew/>} /> 
+              <Route path='/user/new' element={<UserNew/>} /> 
+              <Route path='/user/login' element={<UserLogin/>} /> 
+                        
             </Routes>
         </Router>
     </div>
