@@ -8,7 +8,7 @@ export default function PetNew(){
     const [form, setForm] = useState({
         Name: '',
         Breed: '',
-        date_of_birth: '',
+        Date_of_birth: '',
         Nickname: '',
         Catchphrase: ''
     })
