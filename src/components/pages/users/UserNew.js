@@ -82,7 +82,7 @@ const handleSubmit = async e =>{
                         value = {password}
                         required
                     />
-                <button type="submit"><h2>Register</h2></button>
+                <button type="submit" class="bg-sky-500 hover:bg-sky-700 ..."><h2>Register</h2></button>
             </form>
 
             <div>

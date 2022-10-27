@@ -64,7 +64,7 @@ export default function UserLogin( {currentUser, setCurrentUser}){
                         onChange={e => setPassword (e.target.value)}
                         value={password}
                     />
-                <button type="submit"><h2>Login</h2></button>
+                <button type="submit" class="bg-sky-500 hover:bg-sky-700 ..."><h2>Login</h2></button>
             </form>
         </div>
     )
