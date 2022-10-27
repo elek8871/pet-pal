@@ -37,17 +37,11 @@ export default function App() {
           <NavBar />
             <Routes>
 
-              <Route path='/' element={<Home 
-              currentUser={currentUser} setCurrentUser={setCurrentUser}/>} /> 
-              <Route path='/pet/new' element={<PetNew
-              currentUser={currentUser} setCurrentUser={setCurrentUser}/>} /> 
-              <Route path='/user/new' element={<UserNew 
-              currentUser={currentUser} setCurrentUser={setCurrentUser}/>} /> 
-              <Route path='/user/login' element={<UserLogin 
-              currentUser={currentUser} setCurrentUser={setCurrentUser}/>} /> 
-              <Route path='/user/profile' element={currentUser ? <Profile 
-              currentUser={currentUser} setCurrentUser={setCurrentUser}/>
-              : <Navigate to = "/user/login"/> }/> 
+              <Route path='/' element={<Home />} /> 
+              <Route path='/pet/new' element={<PetNew/>} /> 
+              <Route path='/user/new' element={<UserNew />} /> 
+              <Route path='/user/login' element={<UserLogin />} /> 
+              <Route path='/user/profile' element={<Profile /> }/> 
              
             </Routes>
         </Router>
