@@ -17,7 +17,7 @@ function MyTimer({ expiryTimestamp, autoStart }) {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <p class="text-2xl">Potty training timer</p>
+      <p className="text-2xl">Potty training timer</p>
       <div style={{fontSize: '100px'}}>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
       </div>

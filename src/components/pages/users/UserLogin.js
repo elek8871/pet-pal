@@ -5,6 +5,7 @@ import { useNavigate, Navigate } from "react-router-dom"
 
 export default function UserLogin( {currentUser, setCurrentUser}){
     // states for the controlled form
+    const [username, setUsername] =useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] =useState("")
     const [msg, setMsg] = useState("")
@@ -16,11 +17,12 @@ export default function UserLogin( {currentUser, setCurrentUser}){
         try{
         // post form to backend
             const reqBody = {
+                username,
                 email,
                 password
             }
-            // console.log('TACO', reqBody)
-           await axios.post(`/api/user/`, reqBody)
+            console.log('TACO', reqBody)
+           await axios.post(`http://localhost:8000/api/user/login`, reqBody)
         }catch(err){
             console.warn(err)
             if(err.response === 400 ){
@@ -40,6 +42,14 @@ export default function UserLogin( {currentUser, setCurrentUser}){
             <h1> Login to access your account </h1>
             {msg}
             <form onSubmit={handleSubmit}>
+            <label htmlFor="username"><h2>Username:</h2></label>
+                    <input
+                        type = "text"
+                        id = "username"
+                        placeholder = "your username"
+                        onChange ={e=> setEmail(e.target.value)}
+                        value={username}
+                    />
                 <label htmlFor="email"><h2>Email:</h2></label>
                     <input
                         type = "text"

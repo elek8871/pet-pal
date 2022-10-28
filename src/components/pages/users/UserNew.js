@@ -5,7 +5,7 @@ import { Navigate, useNavigate, Link }  from "react-router-dom"
 
 export default function UserNew({currentUser, setCurrentUser}){
 // state for the controlled form
-const [name, setName] =useState("")
+const [username, setUsername] =useState("")
 const [email, setEmail]= useState("")
 const [password, setPassword] = useState ("")
 const [msg, setMsg] = useState(" ")
@@ -17,11 +17,12 @@ const handleSubmit = async e =>{
     try{
         // posts form body to the backend server
         const reqBody = {
-            name, 
+            username, 
             email,
             password
         }
-        await axios.post('/api/user', reqBody)
+        console.log('BANANA', reqBody)
+        await axios.post('http://localhost:8000/api/user/', reqBody)
         // got to user profile page
         
     }catch(err){
@@ -47,13 +48,13 @@ const handleSubmit = async e =>{
 
             {/* new user form */}
             <form onSubmit={handleSubmit} >
-                <label htmlFor="name"> <h2>Name:</h2></label>
+                <label htmlFor="username"> <h2>username:</h2></label>
                     <input 
                         type = "text"
-                        id = "name"
-                        placeholder = "Enter your name"
-                        onChange = {e=> setName(e.target.value)}
-                        value = {name}
+                        id = "username"
+                        placeholder = "Enter your username"
+                        onChange = {e=> setUsername(e.target.value)}
+                        value = {username}
                         required
                     />
                 <label htmlFor="email"> <h2>Email:</h2></label>

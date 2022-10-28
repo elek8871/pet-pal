@@ -6,7 +6,7 @@ export default function Appts(){
     
     return(
         <div>
-            <h1 class="text-2xl">Appointments</h1>
+            <h1 className="text-2xl">Appointments</h1>
             <Cuddles/>
             <Groomer/>
             <Play_dates/>

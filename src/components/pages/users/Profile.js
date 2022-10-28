@@ -1,8 +1,8 @@
 export default function Profile(){
-    
+
     return(
         <div>
-            I am the profile page 
+            <h1></h1>
         </div>
     )
 }
