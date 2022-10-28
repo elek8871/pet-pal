@@ -28,7 +28,7 @@ export default function PetNew(){
                 }
             }
 
-            const response = await axios.post('/api-v1/pet/new', form, options)
+            const response = await axios.post('http://localhost:8000/api-v1/pet/new', form, options)
             console.log(response.data)
             console.log(form)
             navigate('/user/profile')

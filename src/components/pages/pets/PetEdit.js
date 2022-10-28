@@ -61,7 +61,7 @@ const handleDelete = async e => {
     e.preventDefault()
     try {
         console.log(options)
-        const response = await axios.delete(`/user/pet/${id}`, options)
+        const response = await axios.delete(`http://localhost:8000/user/pet/${id}/`, options)
         navigate(`/user/profile`)
     } catch(err) {
         console.warn(err)
