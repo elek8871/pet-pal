@@ -22,17 +22,9 @@ const handleSubmit = async e =>{
             email,
             password
         }
-        const response = await axios.post('/api-v1/user', reqBody)
-        // save the token in local storage
-        const { token } = response.data
-        localStorage.setItem("jwt", token)
-        // decode the token
-        const decoded = jwt_decode(token)
-        // set the user in Apps state to be the decoded token
-        setCurrentUser(decoded)
+        await axios.post('/api/user', reqBody)
         // got to user profile page
-        navigate("/")
-
+        
     }catch(err){
         console.warn(err)
         if(err.response){
@@ -41,6 +33,7 @@ const handleSubmit = async e =>{
             }
         }
     }
+    navigate("/")
 }
 
 // render a navigate component if user is already logged in 
@@ -54,7 +47,7 @@ const handleSubmit = async e =>{
             <p> {msg}</p>
 
             {/* new user form */}
-            <form >
+            <form onSubmit={handleSubmit} >
                 <label htmlFor="name"> <h2>Name:</h2></label>
                     <input 
                         type = "text"
@@ -82,7 +75,7 @@ const handleSubmit = async e =>{
                         value = {password}
                         required
                     />
-                <button type="submit" class="bg-sky-500 hover:bg-sky-700 ..."><h2>Register</h2></button>
+                <button type="submit" className="bg-sky-500 hover:bg-sky-700 ..."><h2>Register</h2></button>
             </form>
 
             <div>

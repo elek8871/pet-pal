@@ -19,23 +19,15 @@ export default function UserLogin( {currentUser, setCurrentUser}){
                 email,
                 password
             }
-            console.log('TACO', reqBody)
-            const response = await axios.post(`/user/login`, reqBody)
-
-            // save the token in local storage
-            const { token } = response.data
-            localStorage.setItem("jwt", token)
-            // decode the token
-            const decoded= jwt_decode(token)
-            // set the user in app state
-            setCurrentUser(decoded)
-            navigate('/user/profile')
+            // console.log('TACO', reqBody)
+           await axios.post(`/api/user/`, reqBody)
         }catch(err){
             console.warn(err)
             if(err.response === 400 ){
-                    setMsg(err.response.data.msg)
+                setMsg(err.response.data.msg)
             }
         }
+        navigate('/user/profile')
     }
     // conditionally render a navigate component
     if (currentUser){
@@ -64,7 +56,7 @@ export default function UserLogin( {currentUser, setCurrentUser}){
                         onChange={e => setPassword (e.target.value)}
                         value={password}
                     />
-                <button type="submit" class="bg-sky-500 hover:bg-sky-700 ..."><h2>Login</h2></button>
+                <button type="submit" className="bg-sky-500 hover:bg-sky-700 ..."><h2>Login</h2></button>
             </form>
         </div>
     )

@@ -22,8 +22,8 @@ export default function NavBar({currentUser, setCurrentUser}){
 
     const loggedOut =(
         <>
-        <Link to= "/user/new" class="hover:bg-white ..."> Sign Up </Link> 
-        <Link to= "/user/login" class="hover:bg-white ..."> Log into your Account</Link> 
+        <Link to= "/user/new" className="hover:bg-white ..."> Sign Up </Link> 
+        <Link to= "/user/login" className="hover:bg-white ..."> Log into your Account</Link> 
         </>
 
     )
@@ -31,8 +31,8 @@ export default function NavBar({currentUser, setCurrentUser}){
     return(
         <nav>
             <div>
-            <Link to='/' class="hover:bg-white ...">Home</Link>
-            <Link to='/pet/new' class="hover:bg-white ...">Add your pet</Link>
+            <Link to='/' className="hover:bg-white ...">Home</Link>
+            <Link to='/pet/new' className="hover:bg-white ...">Add your pet</Link>
             {currentUser ? loggedIn : loggedOut}
             </div>
         </nav>
