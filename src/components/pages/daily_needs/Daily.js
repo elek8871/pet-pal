@@ -2,6 +2,7 @@ import Food from "./Food"
 import Walk from "./Walk"
 import Potty_trip from "./Potty_trip"
 import Meds from "./Meds"
+import TableDatePicker from "./TableDatePicker"
 
 export default function Daily(){
     
@@ -11,7 +12,7 @@ export default function Daily(){
             <Food/>
             <Walk/>
             <Potty_trip/>
-            <Meds/>
+            <TableDatePicker/>
         </div>
     )
 }
