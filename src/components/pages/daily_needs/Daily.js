@@ -8,11 +8,12 @@ export default function Daily(){
     
     return(
         <div>
-            <h1>Daily needs</h1>
+            <h1 class="text-2xl">Daily needs</h1>
             <Food/>
             <Walk/>
             <Potty_trip/>
             <TableDatePicker/>
+            {/* <Meds /> */}
         </div>
     )
 }

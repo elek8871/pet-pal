@@ -2,7 +2,7 @@ export default function Food(){
     
     return(
         <div>
-            Was that the dinner bell? 
+            Was that the dinner? 
         </div>
     )
 }

@@ -42,7 +42,7 @@ export default function Groomer(){
     }
     return(
         <div>
-        <h2>Let me just pencil you in</h2>
+        <h2 class="text-1xl">Let me just pencil you in...</h2>
         <p>{errorMessage}</p>
 
         <form onSubmit={handleSubmit}>

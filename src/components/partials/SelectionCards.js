@@ -3,7 +3,7 @@ import VetForm from "./VetForm.js"
 export default function SelectionCards(){
     return(
         <div>
-            <h1>Health</h1>
+            <h1 class="text-2xl">Health</h1>
                 <VetForm />
 
         </div>

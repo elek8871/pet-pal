@@ -44,7 +44,7 @@ export default function VetForm(){
     }
     return(
         <div>
-        <h2>What did they do at the vet today?</h2>
+        <h2 class="text-1xl">What did they do at the vet today?</h2>
         <p>{errorMessage}</p>
 
         <form onSubmit={handleSubmit}>
