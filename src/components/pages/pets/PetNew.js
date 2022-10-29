@@ -4,40 +4,37 @@ import { useNavigate } from "react-router-dom"
 
 
 export default function PetNew(){
-
-    const [form, setForm] = useState({
-        Name: '',
-        Breed: '',
-        Date_of_birth: '',
-        Nickname: '',
-        Catchphrase: ''
-    })
+    const [petname, setPetname] = useState("")
+    const [breed, setBreed] = useState("")
+    const [date_of_birth, setDate_of_birth] = useState("")
+    const [nickname, setNickname] = useState("")
+    const [catchphrase, setCatchphrase] = useState("")
 
     const [errorMessage, setErrorMessage] = useState('')
-
     const navigate = useNavigate()
 
     // submit event handler
     const handleSubmit = async e => {   
         e.preventDefault()
         try {
-            const token = localStorage.getItem('jwt')
-            const options = {
-                headers: {
-                    'Authorization': token
-                }
+             const reqBody ={
+                petname,
+                breed,
+                date_of_birth,
+                nickname,
+                catchphrase
             }
 
-            const response = await axios.post('/api-v1/pet/new', form, options)
-            console.log(response.data)
-            console.log(form)
-            navigate('/user/profile')
+            await axios.post('http://localhost:8000/api/pet/', reqBody)
+            console.log('CAKE', reqBody)
+
         } catch (err) {
             console.warn(err)
             if (err.response) {
                 setErrorMessage(err.response.data.message)
             }
         }
+        navigate('/')
     }
     return(
         <div>
@@ -49,10 +46,10 @@ export default function PetNew(){
                     <label htmlFor='Name'><h2>Name:</h2></label>
                     <input 
                         type='text'
-                        id='Name'
-                        value={form.Name}
+                        id='petname'
+                        // value={form.Name}
                         placeholder="What's your pet's name?"
-                        onChange={e => setForm ({ ...form, Name: e.target.value})}
+                        onChange={e => setPetname (e.target.value)}
                         />
                 </div>
                 <div>
@@ -60,9 +57,9 @@ export default function PetNew(){
                     <input 
                         type='text'
                         id='Breed'
-                        value={form.Breed}
+                        // value={form.Breed}
                         placeholder='What breed is your pet?'
-                        onChange={e => setForm ({ ...form, Breed: e.target.value})}
+                        onChange={e => setBreed ( e.target.value)}
                         />
                 </div>
                 <div>
@@ -70,9 +67,9 @@ export default function PetNew(){
                     <input 
                         type='text'
                         id='date_of_birth'
-                        value={form.date_of_birth}
+                        // value={form.date_of_birth}
                         placeholder='When was your pet born or adopted?'
-                        onChange={e => setForm ({ ...form, date_of_birth: e.target.value})}
+                        onChange={e => setDate_of_birth (e.target.value)}
                         />
                 </div>
                 <div>
@@ -80,9 +77,9 @@ export default function PetNew(){
                     <input 
                         type='text'
                         id='Nickname'
-                        value={form.Nickname}
+                        // value={form.Nickname}
                         placeholder='Does your pet have a nickname?'
-                        onChange={e => setForm ({ ...form, Nickname: e.target.value})}
+                        onChange={e => setNickname(e.target.value)}
                         />
                 </div>
                 <div>
@@ -90,9 +87,9 @@ export default function PetNew(){
                     <input 
                         type='text'
                         id='Catchphrase'
-                        value={form.Catchphrase}
-                        placeholder='When was your pet born or adopted?'
-                        onChange={e => setForm ({ ...form, Catchphrase: e.target.value})}
+                        // value={form.Catchphrase}
+                        placeholder="What's on your pets mind?"
+                        onChange={e => setCatchphrase (e.target.value)}
                         />
                 </div>
 
@@ -102,3 +99,13 @@ export default function PetNew(){
         </div>
     )
 }    
+
+
+
+
+  // const token = localStorage.getItem('jwt')
+            // const options = {
+            //     headers: {
+            //         'Authorization': token
+            //     }
+            // }
