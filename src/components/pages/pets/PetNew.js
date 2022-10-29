@@ -24,7 +24,6 @@ export default function PetNew(){
                 nickname,
                 catchphrase
             }
-
             await axios.post('http://localhost:8000/api/pet/', reqBody)
             console.log('CAKE', reqBody)
 
