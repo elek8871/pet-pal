@@ -22,7 +22,15 @@ export default function UserLogin( {currentUser, setCurrentUser}){
                 password
             }
             console.log('TACO', reqBody)
-           await axios.post(`http://localhost:8000/api/user/login`, reqBody)
+           const response = await axios.post(`http://localhost:8000/api/user/login/`, reqBody)
+
+            // save the token in local storage
+            const { token } = response.data
+            localStorage.setItem("jwt", token)
+            // decode the token
+            const decoded= jwt_decode(token)
+            // set the user in app state
+            setCurrentUser(decoded)
         }catch(err){
             console.warn(err)
             if(err.response === 400 ){

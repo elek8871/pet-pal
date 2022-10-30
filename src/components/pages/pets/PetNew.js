@@ -26,7 +26,6 @@ export default function PetNew(){
             }
             await axios.post('http://localhost:8000/api/pet/', reqBody)
             console.log('CAKE', reqBody)
-
         } catch (err) {
             console.warn(err)
             if (err.response) {

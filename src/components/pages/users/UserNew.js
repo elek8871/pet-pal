@@ -2,6 +2,7 @@ import { useState } from "react"
 import axios from "axios"
 import jwt_decode from "jwt-decode"
 import { Navigate, useNavigate, Link }  from "react-router-dom"
+import jwt_decode from "jwt-decode"
 
 
 export default function UserNew({currentUser, setCurrentUser}){
@@ -22,8 +23,11 @@ const handleSubmit = async e =>{
             email,
             password
         }
-        const response = await axios.post('/api-v1/user', reqBody)
-        // save the token in local storage
+
+        console.log('BANANA', reqBody)
+        const response = await axios.post('http://localhost:8000/api/user/', reqBody)
+        // got to user profile page
+
         const { token } = response.data
         localStorage.setItem("jwt", token)
         // decode the token
@@ -31,8 +35,8 @@ const handleSubmit = async e =>{
         // set the user in Apps state to be the decoded token
         setCurrentUser(decoded)
         // got to user profile page
-        navigate("/")
 
+        navigate("/")
     }catch(err){
         console.warn(err)
         if(err.response){
