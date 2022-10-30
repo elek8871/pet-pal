@@ -3,7 +3,7 @@ import axios from "axios"
 import { Navigate, useNavigate, Link }  from "react-router-dom"
 import jwt_decode from "jwt-decode"
 
-
+// {currentUser, setCurrentUser}
 export default function UserNew({currentUser, setCurrentUser}){
 // state for the controlled form
 const [username, setUsername] =useState("")
@@ -23,15 +23,18 @@ const handleSubmit = async e =>{
             password
         }
         console.log('BANANA', reqBody)
-        const response = await axios.post('http://localhost:8000/api/user/', reqBody)
+
+        // const response = 
+        await axios.post('http://localhost:8000/api/user/', reqBody)
+        // save the token in local storage
+        // const { token } = response.data
+        // localStorage.setItem("jwt", token)
+        // // decode the token
+        // const decoded= jwt_decode(token)
+        // // set the user in app state
+        // setCurrentUser(decoded)
         // got to user profile page
-        const { token } = response.data
-        localStorage.setItem("jwt", token)
-        // decode the token
-        const decoded = jwt_decode(token)
-        // set the user in Apps state to be the decoded token
-        setCurrentUser(decoded)
-        // got to user profile page
+        
     }catch(err){
         console.warn(err)
         if(err.response){
