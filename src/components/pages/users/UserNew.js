@@ -65,7 +65,7 @@ const handleSubmit = async e =>{
                         onChange = {e=> setEmail(e.target.value)}
                         value = {email}
                         required
-                        />
+                    />
                 <label htmlFor="password"> <h2>Password:</h2></label>
                     <input 
                         type = "text"
