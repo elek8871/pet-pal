@@ -29,7 +29,7 @@ export default function Groomer(){
                 }
             }
 
-            const response = await axios.post(`/pet/${id}/appointment`, form, options)
+            const response = await axios.post(`http://localhost:8000/pet/${id}/appointment/`, form, options)
             console.log(response.data)
             console.log(form)
             navigate('/user/profile')

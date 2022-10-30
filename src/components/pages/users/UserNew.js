@@ -23,7 +23,7 @@ const handleSubmit = async e =>{
             password
         }
         console.log('BANANA', reqBody)
-        const response = await axios.post('http://localhost:8000/api/user/', reqBody)
+        const response = await axios.post('http://localhost:8000/api/user/new', reqBody)
         // got to user profile page
         const { token } = response.data
         localStorage.setItem("jwt", token)
