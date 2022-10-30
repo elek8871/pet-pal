@@ -34,7 +34,7 @@ export default function Profile(){
 
     return(
         <div>
-            <h1> Welome to Pet Pal </h1>
+            <h1> Welcome to Pet Pal </h1>
             <p> Pet Pal is designed to keep you up to date on your pets appointments and needs</p>
             {errorMessage}
             {/* link to add a new pet */}
