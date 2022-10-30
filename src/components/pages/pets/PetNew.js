@@ -27,7 +27,7 @@ export default function PetNew(){
                     'Authorization': token
                 }
             }
-
+            console.log(token)
             const response = await axios.post('http://localhost:8000/api/pet/new/', form, options)
             console.log(response.data)
             console.log(form)

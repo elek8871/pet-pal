@@ -31,10 +31,10 @@ export default function VetForm(){
                 }
             }
 
-            const response = await axios.post(`/pet/${id}/health`, form, options)
+            const response = await axios.post("http://localhost:8000/api/pet/health/", form, options)
             console.log(response.data)
             console.log(form)
-            navigate('/user/profile')
+            navigate('/user/profile/')
         } catch (err) {
             console.warn(err)
             if (err.response) {

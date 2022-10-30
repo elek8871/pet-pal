@@ -15,7 +15,7 @@ import NavBar from './components/partials/NavBar';
 
 export default function App() {
 
-  const [currentUser,setCurrentUser] = useState (null)
+  const [currentUser,setCurrentUser] = useState (localStorage.getItem('jwt')? { userId: jwt_decode(localStorage.getItem('jwt')).user_id }: null)
   // useEffect -- if the user navigates away form the page, we will log them back in
   useEffect(() => {
     // check to see if token is in storage
@@ -28,7 +28,7 @@ export default function App() {
     }
     
   }, []) // happen only once
-  console.log(currentUser)
+  console.log()
 
 
   return (

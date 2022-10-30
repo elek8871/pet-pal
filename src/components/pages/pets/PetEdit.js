@@ -48,7 +48,7 @@ const handleSubmit = async e => {
     try {
 
         const response = await axios.put(`http://localhost:8000/user/pet/${id}/`, form, options)
-        navigate(`/user/profile`)
+        navigate("/user/profile/")
     } catch(err) {
         console.warn(err)
         if(err.response){
@@ -62,7 +62,7 @@ const handleDelete = async e => {
     try {
         console.log(options)
         const response = await axios.delete(`http://localhost:8000/user/pet/${id}/`, options)
-        navigate(`/user/profile`)
+        navigate("/user/profile")
     } catch(err) {
         console.warn(err)
         if(err.response){
@@ -130,7 +130,7 @@ const handleDelete = async e => {
                 <button type='submit'><h3>Submit changes</h3></button>
 
             </form>
-            <form onSubmit={handleDelete}>
+                <form onSubmit={handleDelete}>
 
                 <button type='submit'><h2>Remove pet</h2></button>
 

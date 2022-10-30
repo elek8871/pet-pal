@@ -26,6 +26,7 @@ export default function UserLogin( {currentUser, setCurrentUser}){
 
             // save the token in local storage
             const { token } = response.data
+            console.log(token)
             localStorage.setItem("jwt", token)
             // decode the token
             const decoded= jwt_decode(token)
