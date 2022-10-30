@@ -22,7 +22,7 @@ export default function UserLogin( {currentUser, setCurrentUser}){
                 password
             }
             console.log('TACO', reqBody)
-           const response = await axios.post(`http://localhost:8000/api/user/login/`, reqBody)
+           const response = await axios.post('http://localhost:8000/api/user/login/', reqBody)
 
             // save the token in local storage
             const { token } = response.data
@@ -37,11 +37,11 @@ export default function UserLogin( {currentUser, setCurrentUser}){
                 setMsg(err.response.data.msg)
             }
         }
-        navigate('/user/profile')
+        navigate('/user/profile/')
     }
     // conditionally render a navigate component
     if (currentUser){
-        return <Navigate to="/user/profile" />
+        return <Navigate to="/user/profile/" />
     }
 
 
@@ -55,7 +55,7 @@ export default function UserLogin( {currentUser, setCurrentUser}){
                         type = "text"
                         id = "username"
                         placeholder = "your username"
-                        onChange ={e=> setEmail(e.target.value)}
+                        onChange ={e=> setUsername(e.target.value)}
                         value={username}
                     />
                 <label htmlFor="email"><h2>Email:</h2></label>

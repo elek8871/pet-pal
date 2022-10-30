@@ -38,10 +38,10 @@ export default function App() {
             <Routes>
 
               <Route path='/' element={<Home />} /> 
-              <Route path='/pet/new' element={<PetNew/>} /> 
-              <Route path='/user/new' element={<UserNew />} /> 
-              <Route path='/user/login' element={<UserLogin />} /> 
-              <Route path='/user/profile' element={<Profile /> }/> 
+              <Route path='/user/pet/' element={<PetNew/>} /> 
+              <Route path='/user/new/' element={<UserNew />} /> 
+              <Route path='/user/login/' element={<UserLogin />} /> 
+              <Route path='/user/profile/' element={<Profile /> }/> 
              
             </Routes>
         </Router>

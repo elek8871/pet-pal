@@ -10,7 +10,7 @@ export default function Profile(){
     useEffect(()=>{
         const getPets = async ()=>{
             try{
-                const response = await axios.get(("http://localhost:8000/api/user/pet/", options))
+                const response = await axios.get(("http://localhost:8000/api/user/pet/"))
                 setPets(response.data.pets)
             }catch(err){
                 console.warn(err)
@@ -38,9 +38,9 @@ export default function Profile(){
             <p> Pet Pal is designed to keep you up to date on your pets appointments and needs</p>
             {errorMessage}
             {/* link to add a new pet */}
-            <Link to = "/pet/new"> Add your pet</Link>
+            <Link to = "/pet/new/"> Add your pet</Link>
             {/* link to petdiary */}
-            <Link to="/pet/home"> Your pets diary </Link>
+            <Link to="/pet/home/"> Your pets diary </Link>
         </div>
     )
 }
